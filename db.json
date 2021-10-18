@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "email": "olivier@mail.com",
+      "password": "$2a$10$YRpaYmaFykC9KfoPPv56XeUfOyn9eoZa6F9hytmftVfI2dwOvfWFq",
+      "firstname": "Olivier",
+      "lastname": "Monge",
+      "id": 1
+    },
+    {
+      "email": "ronny@mail.com",
+      "password": "$2a$10$uma6wBq7CesgZxFO0LlxYu2aidirl0/bEQ2vSJTFo2Xa7oW5fM1Q2",
+      "firstname": "Ronny",
+      "lastname": "Cabrera",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "Café americano",
+      "price": 5,
+      "id": 1,
+      "typeId": 1
+    },
+    {
+      "name": "Café con leche",
+      "price": 7,
+      "id": 2,
+      "typeId": 1
+    },
+    {
+      "name": "Sandwich de jamón y queso",
+      "price": 10,
+      "id": 3,
+      "typeId": 1
+    },
+    {
+      "name": "Jugo de frutas natural",
+      "price": 7,
+      "id": 4,
+      "typeId": 1
+    },
+    {
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "id": 5,
+      "typeId": 2
+    },
+    {
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "id": 6,
+      "typeId": 2
+    },
+    {
+      "name": "Papas fritas",
+      "price": 5,
+      "id": 7,
+      "typeId": 2
+    },
+    {
+      "name": "Aros de cebolla",
+      "price": 5,
+      "id": 8,
+      "typeId": 2
+    },
+    {
+      "name": "Agua 500ml",
+      "price": 5,
+      "id": 9,
+      "typeId": 2
+    },
+    {
+      "name": "Agua 700ml",
+      "price": 7,
+      "id": 10,
+      "typeId": 2
+    },
+    {
+      "name": "Bebida/gaseosa 500ml",
+      "price": 7,
+      "id": 11,
+      "typeId": 2
+    },
+    {
+      "name": "Bebida/gaseosa 750ml",
+      "price": 10,
+      "id": 12,
+      "typeId": 2
+    },
+    {
+      "name": "Jugo de Pera",
+      "price": 22,
+      "typeId": 1,
+      "id": 13
+    },
+    {
+      "name": "Jugo de Fresa",
+      "price": 22,
+      "typeId": 1,
+      "id": 14
+    }
+  ],
+  "types": [
+    {
+      "name": "breakfast",
+      "id": 1
+    },
+    {
+      "name": "general",
+      "id": 2
+    }
+  ],
+  "Orders": []
+}
