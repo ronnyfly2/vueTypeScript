@@ -1,5 +1,13 @@
 # vue3cli
 
+## before starting install globally json-server and json-server-auth
+```
+npm install -g json-server json-server-auth express
+```
+## Run server backend
+```
+json-server-auth db.json -r routes.json --port 2312
+```
 ## Project setup
 ```
 yarn install

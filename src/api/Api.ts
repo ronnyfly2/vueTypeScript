@@ -18,7 +18,7 @@ export default class Api {
 
     entries.forEach(([key, entry]) => {
       const interceptor = this.http.interceptors[key];
-      entry.forEach((handler:any) => {
+      entry.forEach((handler: any) => {
         interceptor.use(handler.success, handler.error);
       });
     });
@@ -26,27 +26,33 @@ export default class Api {
   get(url: any, params: any) {
     return this.http
       .get(url, params)
-      .then((response: { data: any; }) => {
-        console.log('Error 1111', response);
+      .then((response: { data: any }) => {
+        console.log("Error 1111", response);
         return response.data;
       })
-      .catch((axiosError: { config: any; message: any; response: { header: any; status: any; data: any; }; }) => {
-        console.log(JSON.stringify(axiosError));
-        console.log('Error 1', axiosError.config);
-        console.log('Error', axiosError.message);
-        console.log('error 1', axiosError.response.header);
-        console.log('error 2', axiosError.response);
-        console.log('error 3', axiosError.response.status);
-        return Promise.reject(axiosError.response.data);
-      });
+      .catch(
+        (axiosError: {
+          config: any;
+          message: any;
+          response: { header: any; status: any; data: any };
+        }) => {
+          console.log(JSON.stringify(axiosError));
+          console.log("Error 1", axiosError.config);
+          console.log("Error", axiosError.message);
+          console.log("error 1", axiosError.response.header);
+          console.log("error 2", axiosError.response);
+          console.log("error 3", axiosError.response.status);
+          return Promise.reject(axiosError.response.data);
+        }
+      );
   }
   post(url: any, params: any, options: any) {
     return this.http
       .post(url, params, options)
-      .then((response: { data: any; }) => {
+      .then((response: { data: any }) => {
         return response.data;
       })
-      .catch((axiosError: { response: { data: any; }; }) => {
+      .catch((axiosError: { response: { data: any } }) => {
         return Promise.reject(axiosError.response.data);
       });
   }

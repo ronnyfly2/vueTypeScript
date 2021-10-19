@@ -9,16 +9,19 @@ export default {
     loading: false,
   },
   getters: {
-    shopCar: (state: { shopCar: any; }) => state.shopCar,
-    totalCar: (state: { totalCar: any; }) => state.totalCar,
-    error: (state: { error: any; }) => state.error,
-    loading: (state: { loading: any; }) => state.loading,
+    shopCar: (state: { shopCar: any }):void => state.shopCar,
+    totalCar: (state: { totalCar: any }) => state.totalCar,
+    error: (state: { error: any }) => state.error,
+    loading: (state: { loading: any }) => state.loading,
   },
   mutations: {
-    SET_SHOPCAR: (state: { shopCar: any; }, payload: any) => (state.shopCar = payload),
-    SET_TOTAL_CAR: (state: { totalCar: any; }, payload: any) => (state.totalCar = payload),
-    SET_ERROR: (state: { error: any; }, payload: any) => (state.error = payload),
-    SET_LOADING: (state: { loading: any; }, payload: any) => (state.loading = payload),
+    SET_SHOPCAR: (state: { shopCar: any }, payload: any) =>
+      (state.shopCar = payload),
+    SET_TOTAL_CAR: (state: { totalCar: any }, payload: any) =>
+      (state.totalCar = payload),
+    SET_ERROR: (state: { error: any }, payload: any) => (state.error = payload),
+    SET_LOADING: (state: { loading: any }, payload: any) =>
+      (state.loading = payload),
   },
   actions: {
     addProductAction({ dispatch, commit, state }: any, payload: any) {

@@ -21,4 +21,11 @@ export default class BootsTrapPlugin {
     );
     popOverElList.map((toastEl) => new bootstrap.Popover(toastEl));
   }
+
+  alert(): void {
+    const alertList = document.querySelectorAll('.alert')
+    const alerts =  [].slice.call(alertList).map(function (element) {
+      return new bootstrap.Alert(element)
+    })
+  }
 }

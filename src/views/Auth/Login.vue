@@ -42,10 +42,10 @@ export default defineComponent({
   },
   methods: {
     ...mapActions({
-      loginIs: "auth/login",
+      loginUser: "auth/login",
     }),
     login () {
-      this.loginIs( { ...this.model })
+      this.loginUser( { ...this.model })
         .then(() => {
           console.log('compa', this.$router);
           this.$router.push({ name: "Home" });
